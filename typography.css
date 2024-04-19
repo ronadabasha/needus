@@ -33,6 +33,12 @@
 	.h4-inter-d {
 		@apply font-inter font-medium leading-[24px] text-[20px];
 	}
+	.h5-inter-m {
+		@apply font-inter font-medium leading-[13px] text-[11px];
+	}
+	.h5-inter-d {
+		@apply font-inter font-medium leading-[19px] text-[16px];
+	}
 	.breadcrumb-m {
 		@apply font-inter font-light leading-[12px] text-[10px];
 	}
@@ -62,5 +68,8 @@
 	}
 	.h4-inter {
 		@apply h4-inter-m desktop:h4-inter-d;
+	}
+	.h5-inter{
+		@apply h5-inter-m desktop:h5-inter-d;
 	}
 }
