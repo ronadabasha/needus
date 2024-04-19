@@ -8,10 +8,29 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        'needus-black': 'rgba(47, 51, 58, 1)',
+        'needus-light-grey': 'rgba(241, 241, 241, 1)',
+        'needus-grey': 'rgba(111, 111, 111, 1)',
+        'needus-gray': 'rgba(25, 25, 25, 1)',
+        'needus-light-red': 'rgba(231, 60, 23, 1)',
+        'needus-red': 'rgba(226, 48, 0, 1)',
+        'needus-green': 'rgba(18, 160, 92, 1)',
+        'needus-orange': 'rgba(255, 153, 0, 1)',
+        'needus-purple': 'rgba(127, 124, 246, 1)',
+      },
+      screens: {
+        desktop: '768px',
+      },
+      minWidth: {
+        xs: '390px',
+      },
+      maxWidth: {
+        '8xl': '1440px'
+      },
+      fontFamily: {
+        inter: ['var(--font-inter)'],
+        inconsolata: ['var(--font-inconsolata)'],
       },
     },
   },
