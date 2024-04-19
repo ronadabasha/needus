@@ -3,6 +3,11 @@ import localFont from 'next/font/local';
 const inconsolata = localFont({
   src: [
     {
+      path: './Inconsolata-SemiBold.woff2',
+      weight: '600',
+      style: 'normal',
+    },
+    {
       path: './Inconsolata-Bold.woff2',
       weight: '700',
       style: 'normal',
