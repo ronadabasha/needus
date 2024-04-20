@@ -84,6 +84,9 @@
 	.h5-inter{
 		@apply h5-inter-m md:h5-inter-d;
 	}
+	.tabs{
+		@apply tabs-m md:tabs-d
+	}
 	.newsletter-title {
 		@apply newsletter-title-m md:newsletter-title-d;
 	}
