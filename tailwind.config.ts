@@ -19,9 +19,6 @@ const config: Config = {
         'needus-orange': 'rgba(255, 153, 0, 1)',
         'needus-purple': 'rgba(127, 124, 246, 1)',
       },
-      screens: {
-        desktop: '768px',
-      },
       minWidth: {
         xs: '390px',
       },

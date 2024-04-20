@@ -55,21 +55,21 @@
 
 @layer components {
 	.h1-inconsolata {
-	  @apply h1-inconsolata-m desktop:h1-inconsolata-d;
+	  @apply h1-inconsolata-m md:h1-inconsolata-d;
 	}
 	.h1-inter {
-		@apply h1-inter-m desktop:h1-inter-d;
+		@apply h1-inter-m md:h1-inter-d;
 	}
 	.h2-inter {
-		@apply h2-inter-m desktop:h2-inter-d;
+		@apply h2-inter-m md:h2-inter-d;
 	}
 	.h3-inter {
-		@apply h3-inter-m desktop:h3-inter-d;
+		@apply h3-inter-m md:h3-inter-d;
 	}
 	.h4-inter {
-		@apply h4-inter-m desktop:h4-inter-d;
+		@apply h4-inter-m md:h4-inter-d;
 	}
 	.h5-inter{
-		@apply h5-inter-m desktop:h5-inter-d;
+		@apply h5-inter-m md:h5-inter-d;
 	}
 }
