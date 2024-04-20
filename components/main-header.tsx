@@ -6,7 +6,7 @@ import { currency } from "@/data/currency";
 
 const MainHeader = () => {
   return (
-    <div className="hidden md:flex bg-needus-black justify-center w-full">
+    <div className="hidden md:flex bg-needus-gray justify-center w-full">
       <div className="w-full max-w-8xl py-5 pl-20 pr-5">
         <div className="flex justify-between">
           <p className="text-[16px] leading-[19px] text-white">

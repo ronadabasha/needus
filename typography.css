@@ -51,6 +51,18 @@
 	.tabs-d {
 		@apply font-inter font-medium leading-[26px] text-[22px];
 	}
+	.newsletter-title-m{
+		@apply font-inter font-semibold leading-[21px] text-[18px];
+	}
+	.newsletter-title-d{
+		@apply font-inter font-medium leading-[28px] text-[33px];
+	}
+	.newsletter-subtitle-m{
+		@apply font-inter font-normal leading-[16px] text-[14px];
+	}
+	.newsletter-subtitle-d{
+		@apply font-inter font-normal leading-[24px] text-[20px];
+	}
 }
 
 @layer components {
@@ -71,5 +83,11 @@
 	}
 	.h5-inter{
 		@apply h5-inter-m md:h5-inter-d;
+	}
+	.newsletter-title {
+		@apply newsletter-title-m md:newsletter-title-d;
+	}
+	.newsletter-subtitle {
+		@apply newsletter-subtitle-m md:newsletter-subtitle-d;
 	}
 }
