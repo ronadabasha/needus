@@ -29,7 +29,7 @@ const ListBox = ({ items }: Props) => {
             <Listbox.Option
               key={item.name}
               value={item}
-              className="bg-white text-needus-black font-light h5-inter uppercase cursor-pointer py-1 px-3 border-b border-color-[rgba(217, 217, 217, 1)]"
+              className="bg-white text-needus-gray font-light h5-inter uppercase cursor-pointer py-1 px-3 border-b border-color-[rgba(217, 217, 217, 1)]"
             >
               {item.name}
             </Listbox.Option>
