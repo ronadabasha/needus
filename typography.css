@@ -55,7 +55,7 @@
 		@apply font-inter font-semibold leading-[21px] text-[18px];
 	}
 	.newsletter-title-d{
-		@apply font-inter font-medium leading-[28px] text-[33px];
+		@apply font-inter font-medium leading-[33px] text-[28px];
 	}
 	.newsletter-subtitle-m{
 		@apply font-inter font-normal leading-[16px] text-[14px];
