@@ -29,7 +29,7 @@ const ProductCard = () => {
           alt=""
         />
         <Button
-          kind={ButtonKind.secondary}
+          kind={ButtonKind.outlineSecondary}
           onClick={() => {}}
           icon={<CartIcon className="mr-6 w-[18px] h-[18px]" />}
           customStyle="py-[14px] px-[15px] md:px-8 bg-white"

@@ -1,11 +1,10 @@
-import clsx from "clsx";
 import { IconProps } from "./types";
 
 const FavouritesIcon = ({
   className,
   filled,
-  strokeColor,
   filledColor,
+  strokeColor,
 }: IconProps) => (
   <svg
     className={className}

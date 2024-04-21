@@ -29,10 +29,9 @@ const NewsletterForm = () => {
         customStyle="px-4 py-2 h-9 md:h-[73px] "
       />
       <Button
-        kind={subscribed ? ButtonKind.primaryBlack : ButtonKind.primary}
+        kind={subscribed ? ButtonKind.primaryBlack : ButtonKind.primaryBig}
         disabled={subscribed}
         type="submit"
-        customStyle="py-[10px] md:py-6 px-[16px] md:px-[75px] "
       >
         {subscribed ? "Subscribed!" : "Subscribe"}
       </Button>
