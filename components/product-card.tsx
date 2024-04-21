@@ -6,7 +6,7 @@ import CartIcon from "./icons/cart-icon";
 
 const ProductCard = () => {
   return (
-    <div className="max-w-[300px]">
+    <div>
       <div className="text-center bg-needus-light-grey p-[22px]">
         <div className="flex justify-between">
           <span>New</span>
@@ -32,7 +32,7 @@ const ProductCard = () => {
           kind={ButtonKind.secondary}
           onClick={() => {}}
           icon={<CartIcon className="mr-6 w-[18px] h-[18px]" />}
-          customStyle="py-[14px] px-8 bg-white"
+          customStyle="py-[14px] px-[15px] md:px-8 bg-white"
         >
           Add to cart
         </Button>
