@@ -3,6 +3,7 @@ import { IconProps } from "./types";
 
 const CartIcon = ({ className }: IconProps) => (
   <svg
+    className={className}
     width="24"
     height="24"
     viewBox="0 0 24 24"

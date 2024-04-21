@@ -1,8 +1,7 @@
-import clsx from "clsx";
 import { IconProps } from "./types";
 const MapIcon = ({ className }: IconProps) => (
   <svg
-    className={clsx(className)}
+    className={className}
     width="40"
     height="40"
     viewBox="0 0 40 40"

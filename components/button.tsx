@@ -1,7 +1,7 @@
 export enum ButtonKind {
-  primary = "bg-needus-light-red text-white border-needus-light-red hover:bg-needus-dark-red hover:border-needus-dark-red",
+  primary = "tabs-m md:h4-inter-d uppercase bg-needus-light-red text-white border-needus-light-red hover:bg-needus-dark-red hover:border-needus-dark-red",
   outlinedPrimary = "",
-  secondary = "",
+  secondary = "text-needus-grey button-secondary hover:bg-[#F3F3F3]",
   outlineSecondary = "",
   primaryBlack = "bg-needus-black text-white border-needus-black hover:bg-needus-black hover:border-needus-black",
 }
@@ -38,12 +38,14 @@ const Button = ({
     <button
       disabled={disabled}
       onClick={handleOnclick}
-      className={`tabs-m md:h4-inter-d uppercase border border-solid  rounded-none transition ease-in-out duration-300 ${kind} ${customStyle}`}
+      className={`border border-solid  rounded-none transition ease-in-out duration-300 ${kind} ${customStyle}`}
       type={type}
       {...buttonProps}
     >
-      {icon && <div>{icon}</div>}
-      <span title={title}>{children}</span>
+      <div className="flex items-center justify-between">
+        {icon && <span>{icon}</span>}
+        <span title={title}>{children}</span>
+      </div>
     </button>
   );
 };
