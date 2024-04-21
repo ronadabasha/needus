@@ -63,6 +63,13 @@
 	.newsletter-subtitle-d{
 		@apply font-inter font-normal leading-[24px] text-[20px];
 	}
+
+	.button-secondary-m {
+		@apply font-inter font-medium leading-[9px] text-[8px];
+	}
+	.button-secondary-d {
+		@apply font-inter font-medium leading-[21px] text-[18px];
+	}
 }
 
 @layer components {
@@ -92,5 +99,8 @@
 	}
 	.newsletter-subtitle {
 		@apply newsletter-subtitle-m md:newsletter-subtitle-d;
+	}
+	.button-secondary{
+		@apply button-secondary-m md:button-secondary-d;
 	}
 }

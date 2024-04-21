@@ -1,9 +1,8 @@
-import clsx from "clsx";
 import { IconProps } from "./types";
 
 const Chevron = ({ className }: IconProps) => (
   <svg
-    className={clsx(className)}
+    className={className}
     width="10"
     height="5"
     viewBox="0 0 12 7"

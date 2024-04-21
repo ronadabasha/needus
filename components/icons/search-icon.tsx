@@ -1,8 +1,8 @@
-import clsx from "clsx";
 import { IconProps } from "./types";
 
 const SearchIcon = ({ className }: IconProps) => (
   <svg
+    className={className}
     width="24"
     height="24"
     viewBox="0 0 24 24"
