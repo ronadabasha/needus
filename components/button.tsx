@@ -3,7 +3,7 @@ export enum ButtonKind {
   outlinedPrimary = "",
   secondary = "",
   outlineSecondary = "",
-  disabled = "bg-needus-black text-white border-needus-black hover:bg-needus-black hover:border-needus-black",
+  primaryBlack = "bg-needus-black text-white border-needus-black hover:bg-needus-black hover:border-needus-black",
 }
 
 export interface ButtonProps {
@@ -38,7 +38,7 @@ const Button = ({
     <button
       disabled={disabled}
       onClick={handleOnclick}
-      className={`tabs-m md:h4-inter-d uppercase  py-[10px] md:py-6 px-[16px] md:px-[75px] border border-solid  rounded-none transition ease-in-out duration-300 ${kind} ${customStyle}`}
+      className={`tabs-m md:h4-inter-d uppercase border border-solid  rounded-none transition ease-in-out duration-300 ${kind} ${customStyle}`}
       type={type}
       {...buttonProps}
     >
