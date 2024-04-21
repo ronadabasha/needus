@@ -32,7 +32,7 @@ const TextInput = ({
       id={id}
       onChange={handleOnchange}
       type={type}
-      className={`text-needus-grey block w-full h3-inter-m md:h4-inter-d font-normal outline-none h-9 md:h-[73px] px-4 py-2 bg-white ${customStyle}`}
+      className={`text-needus-grey block w-full h3-inter-m lg:h5-inter-d xl:h4-inter-d font-normal outline-none bg-white ${customStyle}`}
     />
   );
 };
