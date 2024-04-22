@@ -1,6 +1,7 @@
 import Breadcrumbs from "@/components/breadcrumbs";
 import MainHeader from "@/components/main-header";
 import Newsletter from "@/components/newsletter";
+import ProductDetails from "@/components/product-details";
 import ProductsSlider from "@/components/products-slider";
 import SecondHeader from "@/components/second-header";
 import SiteFooter from "@/components/site-footer";
@@ -12,6 +13,7 @@ export default function Home() {
       <MainHeader />
       <SecondHeader />
       <Breadcrumbs />
+      <ProductDetails />
       <Tabs />
       <ProductsSlider />
       <Newsletter />
