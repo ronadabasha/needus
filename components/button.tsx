@@ -39,7 +39,9 @@ const Button = ({
     <button
       disabled={disabled}
       onClick={handleOnclick}
-      className={`border border-solid  rounded-none transition ease-in-out duration-300 ${kind} ${customStyle}`}
+      className={`border border-solid  rounded-none transition ease-in-out duration-300 ${kind} ${customStyle} ${
+        disabled ? "opacity-60" : ""
+      }`}
       type={type}
       {...buttonProps}
     >

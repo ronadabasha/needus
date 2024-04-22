@@ -5,10 +5,15 @@ import { useState } from "react";
 import clsx from "clsx";
 import StarIcon from "./icons/star-icon";
 import Button, { ButtonKind } from "./button";
+import Price from "./price";
+import Quantity from "./quantity";
+import MinusIcon from "./icons/minus-icon";
+import PlusIcon from "./icons/plus-icon";
 
 const ProductDetails = () => {
   const [selectedImageIndex, setSlectedImageIndex] = useState(0);
   const [measurement, setMeasurement] = useState("");
+  const [quantity, setQuantity] = useState(0);
   const handleImageClick = (index: number): void => {
     setSlectedImageIndex(index);
   };
@@ -18,16 +23,16 @@ const ProductDetails = () => {
   };
 
   return (
-    <div className="flex items-start max-w-8xl w-full mt-20 mb-[50px] mx-auto pl-20">
-      <div className="flex">
-        <div>
+    <div className="flex flex-col lg:flex-row items-start max-w-8xl w-full mt-20 mb-[50px] mx-auto px-9 lg:pl-20 lg:pr-0">
+      <div className="w-full lg:w-auto flex flex-col lg:flex-row">
+        <div className="flex w-full lg:block order-last lg:order-first">
           {products[0]?.images?.map((image: string, index) => {
             console.log("index", index, selectedImageIndex);
             return (
               <div
                 key={image}
                 className={clsx(
-                  "w-[150px] p-3 mb-[30px] cursor-pointer",
+                  "min-w-[75px] lg:min-w-[150px] p-3 mb-[30px] cursor-pointer",
                   index === selectedImageIndex
                     ? "border border-[#E73C17]"
                     : "border border-[#F0F0F0]"
@@ -46,7 +51,7 @@ const ProductDetails = () => {
             );
           })}
         </div>
-        <div className="relative flex flex-col items-center justify-center w-full bg-needus-light-grey min-w-[530px] p-[30px] ml-3  mb-[30px]">
+        <div className="relative w-full lg:w-auto order-first lg:order-last flex flex-col items-center justify-center w-full bg-needus-light-grey min-w-auto lg:min-w-[530px] p-[30px] ml-3  mb-[30px]">
           <Image
             src={products[0]?.images[selectedImageIndex]}
             width="0"
@@ -108,7 +113,10 @@ const ProductDetails = () => {
           </ul>
         )}
         {products[0]?.measurement && (
-          <div className="mt-11">
+          <div
+            className="mt-11 border-b border-[
+            rgba(240, 240, 240, 1)] mb-[30px]"
+          >
             {products[0]?.measurement.map((item) => {
               return (
                 <Button
@@ -118,6 +126,7 @@ const ProductDetails = () => {
                       ? ButtonKind.primaryOutlined
                       : ButtonKind.secondary
                   }
+                  customStyle="mb-[10px]"
                   onClick={() => handleMeasurement(item)}
                 >
                   {item}
@@ -126,6 +135,36 @@ const ProductDetails = () => {
             })}
           </div>
         )}
+        <div className="flex justify-between">
+          <Price
+            price={products[0]?.price}
+            oldPrice={products[0]?.oldPrice}
+            currency={products[0]?.currency}
+            priceCustomStyle="h1-inter-m md:h2-inter-d font-medium md:font-normal"
+            oldPriceCustomStyle="h5-inter-d md:h3-inter-d ml-3"
+          />
+          <div>
+            <Button
+              kind={ButtonKind.outlineSecondary}
+              disabled={quantity === 0}
+              customStyle="py-[18px] px-[21px]"
+              onClick={() => setQuantity(quantity - 1)}
+            >
+              <MinusIcon />
+            </Button>
+            <span className="h2-inter font-normal pb-[10px] pt-[11px] px-[29px] border-t border-b">
+              {quantity}
+            </span>
+            <Button
+              kind={ButtonKind.outlineSecondary}
+              disabled={quantity === products[0]?.stock}
+              customStyle="py-[18px] px-[21px]"
+              onClick={() => setQuantity(quantity + 1)}
+            >
+              <PlusIcon />
+            </Button>
+          </div>
+        </div>
 
         <div className="flex justify-between pr-[22px] mt-[26px]">
           <Button kind={ButtonKind.primary}>Buy Now</Button>

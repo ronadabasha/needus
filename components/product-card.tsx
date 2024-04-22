@@ -3,6 +3,7 @@ import Image from "next/image";
 import Button, { ButtonKind } from "./button";
 import FavouritesIcon from "./icons/favourites-icon";
 import CartIcon from "./icons/cart-icon";
+import Price from "./price";
 
 const ProductCard = () => {
   return (
@@ -23,8 +24,6 @@ const ProductCard = () => {
           width="0"
           height="0"
           layout="responsive"
-          //objectFit="contain"
-          //className="w-full h-auto"
           src="/assets/products/image-1.png"
           alt=""
         />
@@ -41,10 +40,13 @@ const ProductCard = () => {
         <p className="h4-inter font-normal mb-3 text-needus-black">
           Sony BRAVIA XR Android Tv
         </p>
-        <p className="h4-inter font-semibold">
-          $800.22{" "}
-          <span className="text-[#D9D9D9] line-through ml-3">$1000.66</span>
-        </p>
+        <Price
+          price={800.22}
+          oldPrice={1000.66}
+          currency={"usd"} //todo change
+          priceCustomStyle="h4-inter font-semibold"
+          oldPriceCustomStyle="ml-3"
+        />
       </div>
     </div>
   );
