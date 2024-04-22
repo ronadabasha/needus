@@ -18,7 +18,7 @@ export default function RootLayout({
       lang="en"
       className={clsx(Fonts.inconsolata.variable, Fonts.inter.variable)}
     >
-      <body>{children}</body>
+      <body className="text-needus-black">{children}</body>
     </html>
   );
 }

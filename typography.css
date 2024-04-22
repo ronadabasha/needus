@@ -63,6 +63,26 @@
 	.newsletter-subtitle-d{
 		@apply font-inter font-normal leading-[24px] text-[20px];
 	}
+
+	.button-primary-m {
+		@apply font-inter font-medium leading-[16px] text-[14px];
+	}
+	.button-primary-d {
+		@apply font-inter font-medium leading-[21px] text-[18px];
+	}
+
+	.button-secondary-m {
+		@apply font-inter font-medium leading-[9px] text-[8px];
+	}
+	.button-secondary-d {
+		@apply font-inter font-medium leading-[21px] text-[18px];
+	}
+	.button-outlined-primary-m {
+		@apply font-inter font-light leading-[14px] text-[12px];
+	}
+	.button-outlined-primary-d {
+		@apply font-inter font-light leading-[21px] text-[18px];
+	}
 }
 
 @layer components {
@@ -92,5 +112,17 @@
 	}
 	.newsletter-subtitle {
 		@apply newsletter-subtitle-m md:newsletter-subtitle-d;
+	}
+	.button-secondary{
+		@apply button-secondary-m md:button-secondary-d;
+	}
+	.button-outlined-primary{
+		@apply button-outlined-primary-m md:button-outlined-primary-d;
+	}
+	.newsletter-button {
+		@apply tabs-m md:h4-inter-d;
+	}
+	.button-primary{
+		@apply button-primary-m md:button-primary-d
 	}
 }

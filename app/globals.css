@@ -1,5 +1,11 @@
+
 @import url('../typography.css');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Related products slider style */
+.swiper-pagination-bullet-active{
+background-color: #E73C17!important;
+}
 
