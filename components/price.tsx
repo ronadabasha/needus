@@ -23,9 +23,11 @@ const Price = ({
   return (
     currencySymbol && (
       <div>
-        <span className="breadcrumb-m md:h5-inter-d">
-          {currency.toUpperCase()}(incl. of all taxes)
-        </span>
+        {showTaxInfo && (
+          <span className="breadcrumb-m md:h5-inter-d">
+            {currency.toUpperCase()}(incl. of all taxes)
+          </span>
+        )}
         <p className={priceCustomStyle}>
           {currencySymbol + price}{" "}
           {oldPrice && (
