@@ -2,10 +2,11 @@ import Breadcrumbs from "@/components/breadcrumbs";
 import MainHeader from "@/components/main-header";
 import Newsletter from "@/components/newsletter";
 import ProductDetails from "@/components/product-details";
-import ProductsSlider from "@/components/products-slider";
+import RelatedProductsSlider from "@/components/related-products-slider";
 import SecondHeader from "@/components/second-header";
 import SiteFooter from "@/components/site-footer";
 import Tabs from "@/components/tabs";
+import products from "@/data/products";
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
       <Breadcrumbs />
       <ProductDetails />
       <Tabs />
-      <ProductsSlider />
+      <RelatedProductsSlider relatedProductsIds={products[0].relatedProducts} />
       <Newsletter />
       <SiteFooter />
     </main>

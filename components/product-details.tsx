@@ -93,6 +93,7 @@ const ProductDetails = () => {
             price={products[0]?.price}
             oldPrice={products[0]?.oldPrice}
             currency={products[0]?.currency}
+            showTaxInfo
             priceCustomStyle="h1-inter-m md:h2-inter-d font-medium md:font-normal"
             oldPriceCustomStyle="h5-inter-d md:h3-inter-d ml-3"
           />
