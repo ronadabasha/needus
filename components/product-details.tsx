@@ -1,22 +1,16 @@
 "use client";
-import Image from "next/image";
 import products from "@/data/products";
 import { useState } from "react";
-import clsx from "clsx";
 import StarIcon from "./icons/star-icon";
 import Button, { ButtonKind } from "./button";
 import Price from "./price";
-import Quantity from "./quantity";
 import MinusIcon from "./icons/minus-icon";
 import PlusIcon from "./icons/plus-icon";
+import ProductImages from "./product-images";
 
 const ProductDetails = () => {
-  const [selectedImageIndex, setSlectedImageIndex] = useState(0);
   const [measurement, setMeasurement] = useState("");
   const [quantity, setQuantity] = useState(0);
-  const handleImageClick = (index: number): void => {
-    setSlectedImageIndex(index);
-  };
 
   const handleMeasurement = (item: string) => {
     setMeasurement(item);
@@ -24,48 +18,7 @@ const ProductDetails = () => {
 
   return (
     <div className="flex flex-col lg:flex-row items-start max-w-8xl w-full mt-20 mb-[50px] mx-auto px-9 lg:pl-20 lg:pr-0">
-      <div className="w-full lg:w-auto flex flex-col lg:flex-row">
-        <div className="flex w-full lg:block order-last lg:order-first">
-          {products[0]?.images?.map((image: string, index) => {
-            console.log("index", index, selectedImageIndex);
-            return (
-              <div
-                key={image}
-                className={clsx(
-                  "min-w-[75px] lg:min-w-[150px] p-3 mb-[30px] cursor-pointer",
-                  index === selectedImageIndex
-                    ? "border border-[#E73C17]"
-                    : "border border-[#F0F0F0]"
-                )}
-              >
-                <Image
-                  src={image}
-                  width="0"
-                  height="0"
-                  layout="responsive"
-                  className="w-full h-auto"
-                  alt={products[0].name}
-                  onClick={() => handleImageClick(index)}
-                />
-              </div>
-            );
-          })}
-        </div>
-        <div className="relative w-full lg:w-auto order-first lg:order-last flex flex-col items-center justify-center w-full bg-needus-light-grey min-w-auto lg:min-w-[530px] p-[30px] ml-3  mb-[30px]">
-          <Image
-            src={products[0]?.images[selectedImageIndex]}
-            width="0"
-            height="0"
-            layout="responsive"
-            objectFit="contain"
-            className="w-full h-auto"
-            alt={products[0].name}
-          />
-          <span className="w-full text-[15px] leading-[18px] text-needus-grey text-left font-inter font-light block absolute -bottom-[40px]">
-            {products[0]?.name}
-          </span>
-        </div>
-      </div>
+      <ProductImages product={products[0]} />
       <div className="pl-[55px]">
         <p className="font-inter font-normal text-needus-black text-[18px] leading-[21px] mb-3">
           Brand <span className="font-light ">{products[0]?.brand}</span>
@@ -120,7 +73,7 @@ const ProductDetails = () => {
             {products[0]?.measurement.map((item) => {
               return (
                 <Button
-                  key="item"
+                  key={item}
                   kind={
                     measurement === item
                       ? ButtonKind.primaryOutlined
