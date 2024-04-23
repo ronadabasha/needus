@@ -6,7 +6,6 @@ import { useState } from "react";
 
 const Tabs = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
-  console.log("selectedIndex", selectedIndex);
   return (
     <div className="max-w-8xl mx-auto text-center px-5">
       <Tab.Group selectedIndex={selectedIndex} onChange={setSelectedIndex}>

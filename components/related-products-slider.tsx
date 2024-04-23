@@ -43,7 +43,7 @@ const RelatedProductsSlider = ({ relatedProductsIds }: Props) => {
         >
           {products?.map((product) => {
             return relatedProductsIds.includes(product.id) ? (
-              <SwiperSlide>
+              <SwiperSlide key={product.id}>
                 <ProductCard product={product} />
               </SwiperSlide>
             ) : null;

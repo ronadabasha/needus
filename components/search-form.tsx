@@ -3,8 +3,9 @@ import Button, { ButtonKind } from "./button";
 import SearchIcon from "./icons/search-icon";
 import TextInput from "./text-input";
 
-const Search = () => {
+const SearchForm = () => {
   const [searchKeyword, setSearchKeyword] = useState("");
+
   const handleSubmit = () => {
     //todo
   };
@@ -32,10 +33,10 @@ const Search = () => {
         kind={ButtonKind.primaryBlack}
         type="submit"
         customStyle="md:!px-[18px] md:!py-[21px] -mt-[2px]"
-        icon={<SearchIcon />}
+        icon={<SearchIcon strokeColor="#ffffff" />}
       />
     </form>
   );
 };
 
-export default Search;
+export default SearchForm;

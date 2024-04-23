@@ -18,28 +18,36 @@ const ProductImages = ({ product }: Props) => {
     <div className="relative w-full lg:w-auto h-auto flex flex-col items-center xl:flex-row md:border md:border-[needus-light-grey] md:mb-8 lg:mb-0 md:pb-8 lg:pb-0 lg:border-0 xl:bg-needus-light-grey">
       <div className="max-w-[275px] md:max-w-[600px]  lg:max-w-[528px] xl:max-w-[150px] bg-white mt-[25px] xl:-mt-[30px] xl:w-[150px] order-last xl:order-first  pr-3">
         <Swiper
+          modules={[Navigation]}
           onSwiper={setThumbsSwiper}
           height={500}
           navigation={{
-            enabled: product.images.length > 4 ? true : false,
+            enabled: true,
           }}
           breakpoints={{
             0: {
               slidesPerView: 3,
               direction: "horizontal",
               spaceBetween: 12,
+              navigation: {
+                enabled: product.images.length > 3 ? true : false,
+              },
             },
             1280: {
               slidesPerView: 4,
               direction: "vertical",
               spaceBetween: 0,
+              navigation: {
+                enabled: product.images.length > 4 ? true : false,
+              },
             },
           }}
+          className="md:p-0"
         >
           {product.images?.map((item) => (
             <SwiperSlide
               key={`product-thumb-gallery-${item}`}
-              className="!flex items-center p-[15px] w-auto mt-[30px] border"
+              className="!flex items-center lg:p-[15px] w-auto mt-[30px] border"
             >
               <img
                 src={item}

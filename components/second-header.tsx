@@ -2,11 +2,14 @@
 import Link from "next/link";
 import FavouritesIcon from "./icons/favourites-icon";
 import CartIcon from "./icons/cart-icon";
-import Search from "./search";
 import ProfileLinks from "./profile-links";
 import NavbarDesktop from "./navbar-desktop";
 import NavbarMobile from "./navbar-mobile";
 import CategoriesDesktop from "./categories-desktop";
+import SearchForm from "./search-form";
+import SearchIcon from "./icons/search-icon";
+import Modal from "./modal";
+import AvatarIcon from "./icons/avatar-icon";
 
 const SecondHeader = () => {
   return (
@@ -22,7 +25,7 @@ const SecondHeader = () => {
         <div className="flex flex-1 items-center justify-end lg:justify-center">
           <div className="hidden lg:flex items-center justify-between border border-color-[rgba(240, 240, 240, 1)]">
             <div className="flex">
-              <Search />
+              <SearchForm />
               <CategoriesDesktop />
             </div>
             <ProfileLinks />
@@ -42,6 +45,21 @@ const SecondHeader = () => {
           </div>
         </div>
       </div>
+      <Modal
+        button={
+          <SearchIcon
+            strokeColor="black"
+            className="absolute top-10 right-[140px]"
+          />
+        }
+        panel={<SearchForm />}
+      />
+      <Modal
+        button={
+          <AvatarIcon className="absolute top-10 right-[105px] w-[23px] h-[23px]" />
+        }
+        panel={<ProfileLinks />}
+      />
       <NavbarDesktop />
     </>
   );
