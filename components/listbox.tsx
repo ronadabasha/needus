@@ -12,6 +12,7 @@ export type ListBoxItem = {
 };
 
 type Props = {
+  header?: string;
   items: ListBoxItem[];
   listStyle?: string;
   selectedItemCustomStyle?: string;
@@ -19,6 +20,7 @@ type Props = {
 };
 
 const ListBox = ({
+  header,
   items,
   listStyle,
   selectedItemCustomStyle,
@@ -27,36 +29,38 @@ const ListBox = ({
   const [selectedItem, setSelectedItem] = useState(items[0]);
 
   return (
-    <div className="relative">
+    <div className="relative w-full lg:w-auto ">
       <Listbox value={selectedItem} onChange={setSelectedItem}>
         <Listbox.Button
           className={clsx(
-            "h5-inter flex justify-center font-light",
+            "flex justify-center font-light",
             selectedItemCustomStyle
           )}
         >
-          {selectedItem.name}
+          {header ? header : selectedItem?.name}
           <Chevron className="ml-2 h-[13px] w-[13px] mt-0.5" />
         </Listbox.Button>
-        <Listbox.Options
-          className={clsx(
-            "absolute bg-white z-10 shadow-[0px_0px_20px_5px_rgba(0,0,0,0.2)]",
-            listStyle
-          )}
-        >
-          {items.map((item) => (
-            <Listbox.Option
-              key={item.name}
-              value={item}
-              className={clsx(
-                "bg-white text-needus-gray font-light h5-inter xl:h4-inter cursor-pointer border-b border-color-[rgba(217, 217, 217, 1)]",
-                listItemCustomStyle
-              )}
-            >
-              {item.name}
-            </Listbox.Option>
-          ))}
-        </Listbox.Options>
+        {items && (
+          <Listbox.Options
+            className={clsx(
+              "relative w-full lg:w-auto lg:absolute bg-white z-10 shadow-[0px_0px_20px_5px_rgba(0,0,0,0.2)]",
+              listStyle
+            )}
+          >
+            {items.map((item) => (
+              <Listbox.Option
+                key={item.name}
+                value={item}
+                className={clsx(
+                  "bg-white text-needus-gray font-light h5-inter xl:h4-inter cursor-pointer border-b border-color-[rgba(217, 217, 217, 1)]",
+                  listItemCustomStyle
+                )}
+              >
+                {item.name}
+              </Listbox.Option>
+            ))}
+          </Listbox.Options>
+        )}
       </Listbox>
     </div>
   );

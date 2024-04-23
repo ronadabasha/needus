@@ -2,27 +2,22 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import ProductCard from "./product-card";
-import { Navigation, Pagination } from "swiper/modules";
-
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+import { Pagination } from "swiper/modules";
 import products from "@/data/products";
 
 type Props = {
-  relatedProductsIds: number[];
+  relatedProductsIds: number[] | undefined;
 };
 
 const RelatedProductsSlider = ({ relatedProductsIds }: Props) => {
   return (
     relatedProductsIds?.length && (
-      <div className="max-w-8xl w-full mx-auto mt-3 md:mt-[120px] px-10 md:px-20 pb-[60px]">
+      <div className="max-w-8xl w-full mx-auto md:mt-[120px] px-10 md:px-20 pb-[50px] md:pb-[60px]">
         <h2 className="h1-inter-m md:h2-inter-d text-needus-black mb-4 md:mb-16 text-center">
           Related Products
         </h2>
         <Swiper
-          modules={[Navigation, Pagination]}
+          modules={[Pagination]}
           pagination={{
             enabled: true,
             clickable: true,
@@ -48,7 +43,7 @@ const RelatedProductsSlider = ({ relatedProductsIds }: Props) => {
         >
           {products?.map((product) => {
             return relatedProductsIds.includes(product.id) ? (
-              <SwiperSlide>
+              <SwiperSlide key={product.id}>
                 <ProductCard product={product} />
               </SwiperSlide>
             ) : null;

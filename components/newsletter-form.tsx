@@ -26,7 +26,7 @@ const NewsletterForm = () => {
         onChange={(e) => handleOnChange(e)}
         type="email"
         placeholder="Enter your email"
-        customStyle="px-4 py-2 h-9 md:h-[73px] "
+        customStyle="px-4 py-2 h-9 md:h-[73px] font-normal"
       />
       <Button
         kind={subscribed ? ButtonKind.primaryBlack : ButtonKind.primaryBig}
