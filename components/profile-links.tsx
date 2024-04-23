@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const ProfileLinks = () => {
   return (
-    <div className="pr-[20px] xl:pr-7 pl-[20px] xl:pl-[50px] min-[1400px]:pl-[125px]">
+    <div className="pr-5 xl:pr-7 pl-5 xl:pl-[50px] min-[1400px]:pl-[125px]">
       <Link href="#" className="h5-inter xl:h4-inter font-light">
         Login
       </Link>

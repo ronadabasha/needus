@@ -32,7 +32,7 @@ const ProductCard = ({ product }: Props) => {
             )}
           </ul>
           {product.favourite && (
-            <span className="flex w-[20px] md:w-[60px] h-[20px] md:h-[60px] absolute right-[9px] md:right-8 top-[7px] md:top-3 items-center justify-center border border-color-[rgba(215, 215, 215, 1)] rounded-full">
+            <span className="flex w-5 md:w-[60px] h-5 md:h-[60px] absolute right-[9px] md:right-8 top-[7px] md:top-3 items-center justify-center border border-color-[rgba(215, 215, 215, 1)] rounded-full">
               <FavouritesIcon
                 filled={true}
                 strokeColor="#E73C17"
@@ -57,7 +57,7 @@ const ProductCard = ({ product }: Props) => {
           icon={
             <CartIcon className="mr-2 md:mr-6 w-[10px] h-[10px] md:w-[18px] md:h-[18px]" />
           }
-          customStyle="py-[7px] px-[18px] md:px-8 bg-white max-w-[100px] md:max-w-[205px]"
+          customStyle="py-[7px] md:py-[14px] px-[18px] md:px-8 bg-white max-w-[100px] md:max-w-[205px]"
         >
           Add to cart
         </Button>

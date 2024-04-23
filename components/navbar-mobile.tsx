@@ -1,13 +1,8 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, SyntheticEvent, useState } from "react";
 import Image from "next/image";
-import clsx from "clsx";
-import Chevron from "./icons/chevron";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { categories } from "@/data/categories";
 import { pages } from "@/data/pages";
-import products from "@/data/products";
 import ListBox from "./listbox";
 import MenuIcon from "./icons/menu-icon";
 import CrossIcon from "./icons/cross-icon";
@@ -18,7 +13,6 @@ const NavbarMobile = () => {
   return (
     <>
       <div className="flex flex-1 lg:hidden justify-start text-white">
-        {/* <PhoneLink /> */}
         <button
           type="button"
           className="bg-[#E73C17] p-[9px]"
@@ -57,7 +51,7 @@ const NavbarMobile = () => {
                 </button>
               </div>
               <div
-                className="px-[20px] py-4 flex flex-col"
+                className="px-5 py-4 flex flex-col"
                 onClick={({ target }: SyntheticEvent) => {
                   if ((target as HTMLElement)?.classList.contains("nav-link")) {
                     setMobileMenuOpen(false);

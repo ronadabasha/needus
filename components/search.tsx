@@ -31,10 +31,9 @@ const Search = () => {
       <Button
         kind={ButtonKind.primaryBlack}
         type="submit"
-        customStyle="md:px-[18px] md:py-[21px] -mt-[2px]"
-      >
-        <SearchIcon />
-      </Button>
+        customStyle="md:!px-[18px] md:!py-[21px] -mt-[2px]"
+        icon={<SearchIcon />}
+      />
     </form>
   );
 };

@@ -5,12 +5,7 @@ import Image from "next/image";
 
 import { Product } from "@/data/products";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Thumbs } from "swiper/modules";
-
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+import { Navigation, Thumbs, Zoom } from "swiper/modules";
 
 type Props = {
   product: Product;
@@ -19,48 +14,53 @@ type Props = {
 const ProductImages = ({ product }: Props) => {
   const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
   return (
-    <div className="relative w-full md:w-auto h-auto flex flex-col items-center xl:flex-row xl:bg-needus-light-grey">
-      <div className="w-dvw max-w-[275px] bg-white xl:w-[150px] order-last xl:order-first  pr-3">
+    <div className="relative w-full lg:w-auto h-auto flex flex-col items-center xl:flex-row md:border md:border-[needus-light-grey] md:mb-8 lg:mb-0 md:pb-8 lg:pb-0 lg:border-0 xl:bg-needus-light-grey">
+      <div className="max-w-[275px] md:max-w-[600px]  lg:max-w-[528px] xl:max-w-[150px] bg-white mt-[25px] xl:-mt-[30px] xl:w-[150px] order-last xl:order-first  pr-3">
         <Swiper
           onSwiper={setThumbsSwiper}
           height={500}
+          navigation={product.images.length > 3 ? true : false}
           breakpoints={{
             0: {
               slidesPerView: 3,
               direction: "horizontal",
-              navigation: true,
+              spaceBetween: 12,
             },
             1280: {
               slidesPerView: 4,
               direction: "vertical",
-              navigation: false,
+              spaceBetween: 0,
             },
           }}
         >
           {product.images?.map((item) => (
             <SwiperSlide
               key={`product-thumb-gallery-${item}`}
-              className="flex items-center p-[15px] w-auto mt-[30px] border"
+              className="!flex items-center p-[15px] w-auto mt-[30px] border"
             >
-              <Image
+              <img
                 src={item}
                 alt={``}
-                width={0}
-                height={0}
-                className="w-full h-auto max-w-[120px] mx-auto"
+                className="w-full h-auto max-w-[120px] mx-auto cursor-pointer"
               />
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
-      <div className="max-w-full md:max-w-[528px] text-center order-first xl:order-last">
+      <div className="max-w-full lg:max-w-[528px] text-center lg:bg-[#F1F1F1] xl:bg-transparent order-first xl:order-last">
         <Swiper
-          modules={[Navigation, Thumbs]}
-          thumbs={{ swiper: thumbsSwiper }}
+          modules={[Navigation, Zoom, Thumbs]}
+          zoom
+          thumbs={{
+            swiper: thumbsSwiper,
+          }}
           effect="flip"
         >
           {product.images?.map((item) => (
-            <SwiperSlide key={`product-gallery-${item}`} className="">
+            <SwiperSlide
+              key={`product-gallery-${item}`}
+              className="!flex items-center"
+            >
               <Image
                 src={item}
                 alt={``}

@@ -2,12 +2,7 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import ProductCard from "./product-card";
-import { Navigation, Pagination } from "swiper/modules";
-
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+import { Pagination } from "swiper/modules";
 import products from "@/data/products";
 
 type Props = {
@@ -22,7 +17,7 @@ const RelatedProductsSlider = ({ relatedProductsIds }: Props) => {
           Related Products
         </h2>
         <Swiper
-          modules={[Navigation, Pagination]}
+          modules={[Pagination]}
           pagination={{
             enabled: true,
             clickable: true,
