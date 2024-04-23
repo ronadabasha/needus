@@ -10,7 +10,9 @@ import ProductImages from "./product-images";
 import clsx from "clsx";
 
 const ProductDetails = () => {
-  const [deviceWidth, setDeviceWidth] = useState<number>(window.innerWidth);
+  const [deviceWidth, setDeviceWidth] = useState<number>(
+    typeof window !== "undefined" ? window.innerWidth : 0
+  );
   const [fixedPosition, setFixedPosition] = useState(false);
   const [measurement, setMeasurement] = useState("");
   const [quantity, setQuantity] = useState(0);
@@ -20,11 +22,11 @@ const ProductDetails = () => {
   };
 
   const handleWindowSize = () => {
-    setDeviceWidth(window.innerWidth);
+    setDeviceWidth(typeof window !== "undefined" ? window.innerWidth : 0);
   };
 
   const handleScroll = () => {
-    const scrollTop = window.scrollY;
+    const scrollTop = typeof window !== "undefined" ? window.scrollY : 0;
     const isMobile = deviceWidth <= 768;
     scrollTop >= 200 && isMobile
       ? setFixedPosition(true)
@@ -32,17 +34,21 @@ const ProductDetails = () => {
   };
 
   useEffect(() => {
-    window.addEventListener("resize", handleWindowSize);
-    return () => {
-      window.removeEventListener("resize", handleWindowSize);
-    };
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", handleWindowSize);
+      return () => {
+        window.removeEventListener("resize", handleWindowSize);
+      };
+    }
   }, [deviceWidth]);
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll);
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
   }, [deviceWidth]);
 
   return (
