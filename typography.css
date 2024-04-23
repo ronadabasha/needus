@@ -3,11 +3,23 @@
 @tailwind utilities;
 
 @layer base {
-	.h1-inconsolata-m {
-		@apply font-inconsolata font-semibold leading-[19px] text-[16px];
+	.brand-m {
+		@apply font-inter font-semibold leading-[19px] text-[16px];
 	}
-	.h1-inconsolata-d {
+	.brand-d {
 		@apply font-inconsolata font-bold leading-[50px] text-[48px];
+	}
+	.badge-m{
+		@apply font-inter font-medium leading-[8px] text-[7px];
+	}
+	.badge-d{
+		@apply font-inter font-semibold leading-[19px] text-[16px];
+	}
+	.label-m{
+		@apply font-inter font-medium leading-[7px] text-[6px];
+	}
+	.label-d{
+		@apply font-inter font-medium leading-[14px] text-[12px];
 	}
 	.h1-inter-m {
 		@apply font-inter font-medium leading-[21px] text-[18px];
@@ -86,8 +98,14 @@
 }
 
 @layer components {
-	.h1-inconsolata {
-	  @apply h1-inconsolata-m md:h1-inconsolata-d;
+	.brand {
+	  @apply brand-m md:brand-d;
+	}
+	.badge{
+		@apply badge-m md:badge-d;
+	}
+	.label{
+		@apply label-m md:label-d;
 	}
 	.h1-inter {
 		@apply h1-inter-m md:h1-inter-d;

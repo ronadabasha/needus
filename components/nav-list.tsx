@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import Link from "next/link";
 
 export type NavLink = {
@@ -9,16 +10,23 @@ export type NavLink = {
 type Props = {
   header?: string;
   items: NavLink[];
+  customStyle?: string;
+  listItemCustomStyle?: string;
 };
 
-const NavList = ({ header, items }: Props) => {
+const NavList = ({
+  header,
+  items,
+  customStyle,
+  listItemCustomStyle,
+}: Props) => {
   return items.length > 0 ? (
     <div className="pl-9">
       {header && <h3 className="h3-inter uppercase pb-7">{header}</h3>}
-      <ul className="list-none">
+      <ul className={clsx("list-none", customStyle)}>
         {(items ?? []).map((navLink) => {
           return (
-            <li key={navLink.name} className="">
+            <li key={navLink.name} className={listItemCustomStyle}>
               <Link
                 key={navLink.name}
                 href={navLink.href}

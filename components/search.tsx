@@ -19,19 +19,19 @@ const Search = () => {
         e.preventDefault();
         handleSubmit();
       }}
-      className="flex items-end max-w-[315px] sm:max-w-[715px] p-[5px] border-r border-color-[rgba(240, 240, 240, 1)]"
+      className="flex items-end max-w-[315px] sm:max-w-[440px] p-[5px] border-r border-color-[rgba(240, 240, 240, 1)]"
     >
       <TextInput
         value={searchKeyword}
         onChange={(e) => handleOnChange(e)}
         type="text"
         placeholder="Search Products"
-        customStyle="h-[65px] pl-[15px] xl:pl-[45px] w-[230px] xl:min-w-[250px] min-[1400px]:min-w-[380px]"
+        customStyle="font-light h-[65px] pl-[15px] xl:pl-[45px] w-[230px] xl:min-w-[250px] min-[1400px]:min-w-[365px]"
       />
       <Button
         kind={ButtonKind.primaryBlack}
         type="submit"
-        customStyle="px-[18px] py-5 px-4 py-1 -mt-[2px]"
+        customStyle="md:px-[18px] md:py-[21px] -mt-[2px]"
       >
         <SearchIcon />
       </Button>

@@ -19,7 +19,7 @@ type Props = {
 const ProductImages = ({ product }: Props) => {
   const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
   return (
-    <div className="relative w-auto h-auto flex flex-col items-center xl:flex-row xl:bg-needus-light-grey">
+    <div className="relative w-full md:w-auto h-auto flex flex-col items-center xl:flex-row xl:bg-needus-light-grey">
       <div className="w-dvw max-w-[275px] bg-white xl:w-[150px] order-last xl:order-first  pr-3">
         <Swiper
           onSwiper={setThumbsSwiper}
@@ -53,7 +53,7 @@ const ProductImages = ({ product }: Props) => {
           ))}
         </Swiper>
       </div>
-      <div className="max-w-[528px] mx-auto text-center order-first xl:order-last">
+      <div className="max-w-full md:max-w-[528px] text-center order-first xl:order-last">
         <Swiper
           modules={[Navigation, Thumbs]}
           thumbs={{ swiper: thumbsSwiper }}

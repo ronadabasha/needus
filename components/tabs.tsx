@@ -50,8 +50,26 @@ const Tabs = () => {
               More...
             </Link>
           </Tab.Panel>
-          <Tab.Panel>Content 2</Tab.Panel>
-          <Tab.Panel>Content 3</Tab.Panel>
+          <Tab.Panel>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+            iaculis, metus eu rhoncus efficitur, turpis sem tempus massa, id
+            consectetur nunc purus in lectus. Donec non velit a odio volutpat
+            volutpat in in nisi. Maecenas aliquet turpis lacus, id pharetra elit
+            sagittis vel. Ut consectetur nisi quis ullamcorper pellentesque.
+            Integer efficitur interdum nunc, ut elementum nulla. Phasellus
+            feugiat nulla et rhoncus porttitor. Nullam at lectus sed turpis
+            porttitor viverra accumsan hendrerit lorem. Praesent tincidunt nisi
+            at nunc suscipit malesuada.
+          </Tab.Panel>
+          <Tab.Panel>
+            Suspendisse potenti. Sed dapibus bibendum orci, eget semper diam
+            tincidunt eget. Nulla a mi non nulla fermentum molestie. Aenean
+            magna massa, tempus quis risus nec, sollicitudin consectetur mi.
+            Donec dictum nulla sed nulla semper elementum. Nulla dictum ultrices
+            risus, id ornare arcu rutrum vel. Curabitur vestibulum id nisi at
+            pellentesque. Aenean a lacinia tellus. Aliquam iaculis odio sit amet
+            velit laoreet, non feugiat tellus elementum.
+          </Tab.Panel>
         </Tab.Panels>
       </Tab.Group>
     </div>
