@@ -1,6 +1,6 @@
 import { IconProps } from "./types";
 
-const SearchIcon = ({ className }: IconProps) => (
+const SearchIcon = ({ className, strokeColor }: IconProps) => (
   <svg
     className={className}
     width="24"
@@ -9,20 +9,20 @@ const SearchIcon = ({ className }: IconProps) => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <g clip-path="url(#clip0_36_715)">
+    <g clipPath="url(#clip0_36_715)">
       <path
         d="M10 17C13.866 17 17 13.866 17 10C17 6.13401 13.866 3 10 3C6.13401 3 3 6.13401 3 10C3 13.866 6.13401 17 10 17Z"
-        stroke="white"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        stroke={strokeColor}
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M21 21L15 15"
-        stroke="white"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        stroke={strokeColor}
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </g>
     <defs>

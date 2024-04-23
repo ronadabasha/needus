@@ -12,8 +12,8 @@ import YoutubeIcon from "./icons/youtube-icon";
 import Link from "next/link";
 
 const SiteFooter = () => (
-  <footer className="flex justify-center w-full bg-needus-gray text-white">
-    <div className="w-full max-w-8xl px-8 lg:pl-20 pt-10 pb-5 lg:py-[60px] lg:pr-5">
+  <footer className="pb-[95px] md:pb-0 flex justify-center w-full bg-needus-gray text-white">
+    <div className="w-full max-w-8xl px-8 xl:pl-20 pt-10 pb-5 lg:py-[60px] xl:pr-5">
       <div className="hidden lg:flex flex-row justify-between ">
         <div>
           <h3 className="h3-inter uppercase pb-7">About Us</h3>

@@ -6,7 +6,7 @@ const Language = () => {
     <ListBox
       items={lanaguages}
       listStyle="mt-5 px-3"
-      selectedItemCustomStyle="text-white uppercase"
+      selectedItemCustomStyle="h5-inter text-white uppercase"
       listItemCustomStyle="uppercase py-2"
     />
   );

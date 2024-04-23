@@ -15,9 +15,9 @@ type Props = {
 const ProductCard = ({ product }: Props) => {
   return (
     <div>
-      <div className="text-center bg-needus-light-grey p-[22px]">
+      <div className="flex flex-col justify-between items-center text-center bg-needus-light-grey p-[22px] min-h-[185px] md:min-h-[430px]">
         <div className="flex justify-between">
-          <ul>
+          <ul className="absolute left-[7px] top-[4px] md:top-6 md:left-6">
             {product.newProduct && (
               <Label customStyle="bg-[#12A05C]" text="New" />
             )}
@@ -32,35 +32,39 @@ const ProductCard = ({ product }: Props) => {
             )}
           </ul>
           {product.favourite && (
-            <span className="flex w-[60px] h-[60px] absolute right-8 top-3 items-center justify-center border border-color-[rgba(215, 215, 215, 1)] rounded-full">
+            <span className="flex w-5 md:w-[60px] h-5 md:h-[60px] absolute right-[9px] md:right-8 top-[7px] md:top-3 items-center justify-center border border-color-[rgba(215, 215, 215, 1)] rounded-full">
               <FavouritesIcon
                 filled={true}
                 strokeColor="#E73C17"
                 filledColor="#E73C17"
-                className="mt-[2px]"
+                className="mt-[2px] w-[10px] md:w-[30px] h-[10px] md:h-[30px]"
               />
             </span>
           )}
         </div>
-        <Image
-          width="0"
-          height="0"
-          layout="responsive"
-          src={product.images[0]}
-          alt={product.name}
-        />
+        <div className="flex items-center w-full h-[110px] md:h-[250px]">
+          <Image
+            width="0"
+            height="0"
+            layout="responsive"
+            src={product.images[0]}
+            alt={product.name}
+          />
+        </div>
         <Button
           kind={ButtonKind.outlineSecondary}
           onClick={() => {}}
-          icon={<CartIcon className="mr-6 w-[18px] h-[18px]" />}
-          customStyle="py-[14px] px-[15px] md:px-8 bg-white"
+          icon={
+            <CartIcon className="mr-2 md:mr-6 w-[10px] h-[10px] md:w-[18px] md:h-[18px]" />
+          }
+          customStyle="py-[7px] md:py-[14px] px-[18px] md:px-8 bg-white max-w-[100px] md:max-w-[205px]"
         >
           Add to cart
         </Button>
       </div>
-      <div className="py-12 p-4 text-center">
+      <div className="pt-3 md:pt-12 pb-7 md:pb-[53px] p-4 text-center">
         <Link href="#" className="h4-inter font-normal mb-3 text-needus-black">
-          Sony BRAVIA XR Android Tv
+          {product.name}
         </Link>
         <Price
           price={product.price}
