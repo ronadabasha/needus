@@ -47,17 +47,17 @@ const ProductDetails = () => {
   }, [deviceWidth]);
 
   return (
-    <div className="scrollable-element flex flex-col lg:flex-row items-start max-w-8xl w-full mt-20 mb-[50px] mx-auto px-5 xl:pl-20 xl:pr-0">
+    <div className="flex flex-col lg:flex-row items-start max-w-8xl w-full mt-[10px] md:mt-20 mb-0 md:mb-[50px] mx-auto px-8 xl:pl-20 xl:pr-0">
       <ProductImages product={products[0]} />
-      <div className="w-full lg:w-auto pl-0 lg:pl-[55px]">
-        <p className="font-inter font-normal text-needus-black text-[18px] leading-[21px] mb-3">
-          Brand <span className="font-light ">{products[0]?.brand}</span>
+      <div className="mt-5 md:mt-0 w-full lg:w-auto pl-0 lg:pl-[55px]">
+        <p className="text-needus-black mb-3 paragraph">
+          Brand: <span className="font-light ">{products[0]?.brand}</span>
         </p>
-        <p className="font-inter font-normal text-needus-black text-[18px] leading-[21px] mb-3">
-          Model <span className="font-light ">{products[0]?.model}</span>
+        <p className="text-needus-black mb-3 paragraph">
+          Model: <span className="font-light ">{products[0]?.model}</span>
         </p>
-        <p className="font-inter font-normal text-needus-black text-[18px] leading-[21px] mb-3">
-          Availability{" "}
+        <p className="text-needus-black mb-3 paragraph">
+          Availability:{" "}
           <span
             className={
               products[0]?.stock
@@ -70,7 +70,7 @@ const ProductDetails = () => {
               : "Out of stock"}
           </span>
         </p>
-        <h2 className="h2-inter mt-2 pr-8">{products[0]?.name}</h2>
+        <h2 className="h2-inter mt-3 pr-8">{products[0]?.name}</h2>
         <div className="flex my-5">
           {[...Array(4)]?.map((item, i) => {
             const filledColor = products[0]?.rating > i ? "#E73C17" : "#F4F5F8";
@@ -96,10 +96,7 @@ const ProductDetails = () => {
           </ul>
         )}
         {products[0]?.measurement && (
-          <div
-            className="mt-11 border-b border-[
-            rgba(240, 240, 240, 1)] mb-[30px]"
-          >
+          <div className="mt-0 md:mt-11 border-b border-[rgba(240, 240, 240, 1)] mb-0 md:mb-[30px]">
             {products[0]?.measurement.map((item) => {
               return (
                 <Button

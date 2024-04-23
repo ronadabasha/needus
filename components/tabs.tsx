@@ -36,7 +36,7 @@ const Tabs = () => {
             Reviews
           </Tab>
         </Tab.List>
-        <Tab.Panels className="max-w-[1016px] mx-auto py-4 text-left">
+        <Tab.Panels className="max-w-[1016px] mx-auto py-4 text-left text-[10px] md:text-[18px] leading-[12px] md:leading-[21px]">
           <Tab.Panel>
             The LG C2 42 (106cm) 4K Smart OLED evo TV is the best all around
             OLED TV we have tested. Although all OLEDs deliver similar fantastic

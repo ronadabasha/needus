@@ -51,6 +51,12 @@
 	.h5-inter-d {
 		@apply font-inter font-medium leading-[19px] text-[16px];
 	}
+	.paragraph-m {
+		@apply font-inter font-normal leading-[10px] text-[12px];
+	}
+	.paragraph-d {
+		@apply font-inter font-normal leading-[18px] text-[21px];
+	}
 	.breadcrumb-m {
 		@apply font-inter font-light leading-[12px] text-[10px];
 	}
@@ -121,6 +127,9 @@
 	}
 	.h5-inter{
 		@apply h5-inter-m md:h5-inter-d;
+	}
+	.paragraph{
+		@apply paragraph-m md:paragraph-d
 	}
 	.tabs{
 		@apply tabs-m md:tabs-d

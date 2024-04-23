@@ -4,9 +4,9 @@ import FavouritesIcon from "./icons/favourites-icon";
 import CartIcon from "./icons/cart-icon";
 import Search from "./search";
 import ProfileLinks from "./profile-links";
-import Categories from "./categories";
 import NavbarDesktop from "./navbar-desktop";
 import NavbarMobile from "./navbar-mobile";
+import CategoriesDesktop from "./categories-desktop";
 
 const SecondHeader = () => {
   return (
@@ -23,7 +23,7 @@ const SecondHeader = () => {
           <div className="hidden lg:flex items-center justify-between border border-color-[rgba(240, 240, 240, 1)]">
             <div className="flex">
               <Search />
-              <Categories />
+              <CategoriesDesktop />
             </div>
             <ProfileLinks />
           </div>

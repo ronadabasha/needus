@@ -29,7 +29,7 @@ const ListBox = ({
   const [selectedItem, setSelectedItem] = useState(items[0]);
 
   return (
-    <div className="relative">
+    <div className="relative w-full lg:w-auto ">
       <Listbox value={selectedItem} onChange={setSelectedItem}>
         <Listbox.Button
           className={clsx(
@@ -43,7 +43,7 @@ const ListBox = ({
         {items && (
           <Listbox.Options
             className={clsx(
-              "absolute bg-white z-10 shadow-[0px_0px_20px_5px_rgba(0,0,0,0.2)]",
+              "relative w-full lg:w-auto lg:absolute bg-white z-10 shadow-[0px_0px_20px_5px_rgba(0,0,0,0.2)]",
               listStyle
             )}
           >

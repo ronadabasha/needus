@@ -6,6 +6,8 @@ import { pages } from "@/data/pages";
 import ListBox from "./listbox";
 import MenuIcon from "./icons/menu-icon";
 import CrossIcon from "./icons/cross-icon";
+import MobileDropdown from "./mobile-dropdown";
+import { categories } from "@/data/categories";
 
 const NavbarMobile = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -59,6 +61,7 @@ const NavbarMobile = () => {
                 }}
               >
                 <div className="flex flex-col items-start text-white">
+                  <MobileDropdown items={categories} />
                   <Link
                     className="block uppercase text-[16px] leading-[19px] font-inter font-normal px-3 mb-4"
                     href="/"
@@ -71,20 +74,7 @@ const NavbarMobile = () => {
                   >
                     About
                   </Link>
-                  <ListBox
-                    header="Product"
-                    items={[]}
-                    listStyle="mt-2.5 px-6 pt-2"
-                    selectedItemCustomStyle="uppercase text-[16px] leading-[19px] font-inter font-normal mb-4 px-3"
-                    listItemCustomStyle="py-[18px] mb-4"
-                  />
-                  <ListBox
-                    header="Pages"
-                    items={pages}
-                    listStyle="mt-2.5 px-6 pt-2"
-                    selectedItemCustomStyle="uppercase text-[16px] leading-[19px] font-inter font-normal mb-4 px-3"
-                    listItemCustomStyle="py-[18px]"
-                  />
+                  <MobileDropdown items={pages} header="Pages" />
                   <Link
                     className="block uppercase text-[16px] leading-[19px] font-inter font-normal px-3 mb-4"
                     href="/"

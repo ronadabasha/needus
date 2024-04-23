@@ -36,10 +36,7 @@ const products:Product[] = [
       "images": ["/assets/products/product-1/1.png", "/assets/products/product-1/2.png", "/assets/products/product-1/3.png","/assets/products/product-1/4.png"],
       "measurement": ["106 cm (42)","121 cm (48)","139 cm (55)","164 cm (65)","196 cm (77)","210 cm (83)"],
       "relatedProducts": [1,2,3,4,5],
-      //"discount": '-10%',
       "newProduct": true,
-      //"warranty": "2 Years Warranty",
-      //"bestSeller": true
     },
     {
       "id": 1,
@@ -56,10 +53,7 @@ const products:Product[] = [
       "images": ["/assets/products/product-2/1.png", "/assets/products/product-2/2.jpg", "/assets/products/product-2/3.jpg","/assets/products/product-2/4.jpg"],
       "measurement": ["106 cm (42)","121 cm (48)","139 cm (55)","164 cm (65)","196 cm (77)","210 cm (83)"],
       "relatedProducts": [],
-      //"discount": '-10%',
       "newProduct": true,
-      //"warranty": "2 Years Warranty",
-      //"bestSeller": true,
       "favourite": true
     },
     {
@@ -77,10 +71,6 @@ const products:Product[] = [
       "measurement": ["106 cm (42)","121 cm (48)","139 cm (55)","164 cm (65)","196 cm (77)","210 cm (83)"],
       "relatedProducts": [0,1,3,4],
       "discount": '-10%',
-      //"newProduct": true,
-      //"warranty": "2 Years Warranty",
-      //"bestSeller": true,
-      //"favourite": true
     },
     {
       "id": 3,
@@ -96,12 +86,7 @@ const products:Product[] = [
       "images": ["/assets/products/product-4/1.png", "/assets/products/product-4/2.jpg", "/assets/products/product-4/3.jpg","/assets/products/product-4/4.jpg", "/assets/products/product-4/5.jpg"],
       "measurement": ["106 cm (42)","121 cm (48)","139 cm (55)","164 cm (65)","196 cm (77)","210 cm (83)"],
       "relatedProducts": [],
-      //"discount": '-10%',
-      //"newProduct": true,
-      //"warranty": "2 Years Warranty",
-      "bestSeller": true,
-      //"favourite": true
-    
+      "bestSeller": true,    
     },
     {
       "id": 4,
@@ -117,12 +102,7 @@ const products:Product[] = [
       "images": ["/assets/products/product-5/1.png", "/assets/products/product-5/2.jpg", "/assets/products/product-5/3.jpg","/assets/products/product-5/4.jpg", "/assets/products/product-5/5.jpg"],
       "measurement": ["106 cm (42)","121 cm (48)","139 cm (55)","164 cm (65)","196 cm (77)","210 cm (83)"],
       "relatedProducts": [],
-      //"discount": '-10%',
-      //"newProduct": true,
       "warranty": "2 Years Warranty",
-      //"bestSeller": true,
-      //"favourite": true
-
     },
     {
       "id": 5,
@@ -140,8 +120,6 @@ const products:Product[] = [
       "relatedProducts": [],
       "discount": '-10%',
       "newProduct": true,
-      //"warranty": "2 Years Warranty",
-      //"bestSeller": true,
       "favourite": true
 
     }

@@ -1,7 +1,7 @@
 import { categories } from "@/data/categories";
 import ListBox from "./listbox";
 
-const Categories = () => {
+const CategoriesDesktop = () => {
   return (
     <ListBox
       items={categories}
@@ -12,4 +12,4 @@ const Categories = () => {
   );
 };
 
-export default Categories;
+export default CategoriesDesktop;
